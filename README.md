@@ -22,7 +22,7 @@ This is a tool for scraping TikTok ads data using Playwright and Python. The too
 
 3. **Install dependencies:**
     ```
-    pip install -r requirements.txt
+    pip install -r requirments.txt
 
 4. **Install Playwright and its browser dependencies:**
     ```

@@ -16,19 +16,23 @@ This is a tool for scraping TikTok ads data using Playwright and Python. The too
    cd tiktok-ads-scraper
 
 2. **Create a virtual environment and activate it:**
-    ```python -m venv venv
+    ```
+    python -m venv venv
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 3. **Install dependencies:**
-    ```pip install -r requirements.txt
+    ```
+    pip install -r requirements.txt
 
 4. **Install Playwright and its browser dependencies:**
-    ```playwright install
+    ```
+    playwright install
 
 ## Usage
 
 1. **Run the application:**
-    ```python main.py
+    ```
+    python main.py
 
 2. **Login:**
 

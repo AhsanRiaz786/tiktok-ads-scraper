@@ -12,7 +12,7 @@ This is a tool for scraping TikTok ads data using Playwright and Python. The too
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/tiktok-ads-scraper.git
+   git clonehttps://github.com/AhsanRiaz786/tiktok-ads-scraper.git/
    cd tiktok-ads-scraper
 
 2. **Create a virtual environment and activate it:**

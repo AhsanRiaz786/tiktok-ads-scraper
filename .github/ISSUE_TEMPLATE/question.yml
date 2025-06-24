@@ -1,0 +1,105 @@
+name: ❓ Question
+description: Ask a question about using TikTok Ads Scraper
+title: "[Question]: "
+labels: ["question", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your question! Please provide as much detail as possible so we can help you effectively.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What's your question?
+      description: A clear and concise description of what you want to know.
+      placeholder: Ask your question here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you trying to accomplish? What have you already tried?
+      placeholder: |
+        - What I'm trying to do...
+        - What I've already tried...
+        - Where I'm stuck...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: question-type
+    attributes:
+      label: What type of question is this?
+      description: Help us categorize your question
+      options:
+        - Installation/Setup
+        - Usage/How-to
+        - Configuration
+        - Troubleshooting
+        - Best practices
+        - Performance
+        - Integration
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        Please provide your environment details:
+        - Operating System
+        - Python version
+        - Relevant package versions
+      placeholder: |
+        OS: macOS 12.0
+        Python: 3.9.7
+        playwright: 1.20.0
+        ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: code-sample
+    attributes:
+      label: Code Sample
+      description: If applicable, please provide a minimal code sample that demonstrates your question
+      render: python
+      placeholder: |
+        # Your code here
+        from scraper import scrape_tiktok_ads
+        ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: Expected Outcome
+      description: What outcome are you expecting or hoping for?
+      placeholder: What should happen when you do X?
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other information that might be helpful
+      placeholder: Links to documentation you've read, similar questions, etc.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our community guidelines.
+      options:
+        - label: I have read and agree to the community guidelines
+          required: true 

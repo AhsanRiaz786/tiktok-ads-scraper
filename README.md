@@ -1,48 +1,132 @@
 # TikTok Ads Scraper
 
-This is a tool for scraping TikTok ads data using Playwright and Python. The tool logs into TikTok Ads, scrapes data for specified brands, and saves the data to an Excel file. It also downloads the ad videos.
+![Python](https://img.shields.io/badge/python-v3.7+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Playwright](https://img.shields.io/badge/playwright-latest-red.svg)
 
-## Features
-- Login to TikTok Ads
-- Scrape ads data for specified brands
-- Save data to an Excel file
-- Download ad videos
+A powerful tool for scraping TikTok ads data using Playwright and Python. This tool provides a user-friendly GUI to log into TikTok Ads Manager, scrape comprehensive ad data for specified brands, and save the results to Excel files with automatic video downloads.
 
-## Installation
+## ✨ Features
+
+- 🔐 **Secure Login**: Automated login to TikTok Ads Manager with session persistence
+- 📊 **Comprehensive Data Scraping**: Extract detailed ad performance metrics including:
+  - Industry and brand information
+  - Ad captions and creative content
+  - Performance metrics (likes, comments, shares, CTR)
+  - Budget information
+  - Landing page URLs
+- 📹 **Video Downloads**: Automatically download ad videos to local storage
+- 📱 **User-Friendly GUI**: Intuitive interface built with Tkinter
+- 📈 **Excel Export**: Save all scraped data to organized Excel files
+- 🔄 **Progress Tracking**: Real-time progress updates during scraping operations
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Python 3.7 or higher
+- pip package manager
+
+### Installation
 
 1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/AhsanRiaz786/tiktok-ads-scraper.git/
+   ```bash
+   git clone https://github.com/AhsanRiaz786/tiktok-ads-scraper.git
    cd tiktok-ads-scraper
+   ```
 
-2. **Create a virtual environment and activate it:**
-    ```
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+2. **Create and activate a virtual environment:**
+   ```bash
+   python -m venv venv
+   
+   # On macOS/Linux:
+   source venv/bin/activate
+   
+   # On Windows:
+   venv\Scripts\activate
+   ```
 
 3. **Install dependencies:**
-    ```
-    pip install -r requirments.txt
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4. **Install Playwright and its browser dependencies:**
-    ```
-    playwright install
+4. **Install Playwright browsers:**
+   ```bash
+   playwright install chromium
+   ```
 
-## Usage
+### Usage
 
-1. **Run the application:**
-    ```
-    python main.py
+1. **Start the application:**
+   ```bash
+   python main.py
+   ```
 
-2. **Login:**
+2. **First-time setup:**
+   - Click the "Login" button
+   - Enter your TikTok Ads Manager credentials
+   - Your session will be saved for future use
 
-    If this is your first time using the tool, click the "Login" button and enter your TikTok Ads credentials.
-    After a successful login, your session will be saved, and you won't need to log in again unless the session expires.
+3. **Scraping ads:**
+   - Click "Scrape Ads"
+   - Select an Excel file containing brand names (see [Input Format](#input-format))
+   - Monitor progress in real-time
+   - Results will be saved as `tiktok_ads_data.xlsx`
 
-3. **Scrape Ads:**
+### Input Format
 
-    Click the "Scrape Ads" button.
-    Select the Excel file containing the list of brands you want to scrape data for.
-    The scraping process will start, and you will see progress updates on the screen.
-    Once completed, the data will be saved to an Excel file named tiktok_ads_data.xlsx in the project directory.
+Your Excel file should contain a column named "Brand Name" with the brands you want to scrape:
+
+| Brand Name |
+|------------|
+| Nike       |
+| Adidas     |
+| Apple      |
+
+## 📂 Output Structure
+
+The tool generates:
+- `tiktok_ads_data.xlsx`: Comprehensive ad data in Excel format
+- `videos/`: Directory containing downloaded ad videos
+- `state.json`: Saved login session (auto-generated)
+
+## 🛠️ Technical Details
+
+- **Browser Automation**: Uses Playwright with Chromium for reliable scraping
+- **Data Processing**: Pandas for efficient data manipulation and Excel export
+- **GUI Framework**: Tkinter for cross-platform compatibility
+- **Async Operations**: Threading for non-blocking UI during scraping
+
+## 📋 Requirements
+
+See [`requirements.txt`](requirements.txt) for a complete list of dependencies.
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
+
+## 🔒 Security
+
+If you discover a security vulnerability, please see our [Security Policy](SECURITY.md) for instructions on responsible disclosure.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## ⚠️ Disclaimer
+
+This tool is intended for educational and research purposes only. Users are responsible for ensuring compliance with TikTok's Terms of Service and applicable laws. The developers are not responsible for any misuse of this tool.
+
+## 🐛 Issues and Support
+
+- Found a bug? [Open an issue](https://github.com/AhsanRiaz786/tiktok-ads-scraper/issues)
+- Have a feature request? [Start a discussion](https://github.com/AhsanRiaz786/tiktok-ads-scraper/discussions)
+- Need help? Check our [FAQ](https://github.com/AhsanRiaz786/tiktok-ads-scraper/wiki/FAQ) or open an issue
+
+## 🙏 Acknowledgments
+
+- Built with [Playwright](https://playwright.dev/) for robust browser automation
+- Data processing powered by [Pandas](https://pandas.pydata.org/)
+- UI created with Python's built-in [Tkinter](https://docs.python.org/3/library/tkinter.html)
 
